@@ -1,22 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <addons>
-<addon id="plugin.program.ftgimages" name="[COLORred]FTG Images[/COLOR]" version="1.0.1" provider-name="F.T.G">
+<addon id="plugin.program.firetv" name="[COLOR ghostwhite][B]FTG[/B][/COLOR][COLOR blue][B]Wizard[/B][/COLOR]" version="1.0.3" provider-name="F.T.G.">
   <requires>
     <import addon="xbmc.python" version="2.1.0"/>
-  </requires>
-  <extension point="xbmc.python.pluginsource" library="default.py">
-    <provides>executable</provides>
-  </extension>
-  <extension point="xbmc.service" library="startup.py" start="startup" />
-  <extension point="xbmc.addon.metadata">
-    <summary lang="en">FTG Themes</summary>
-    <description lang="en">Themes</description>
-    <platform>all</platform>
-  </extension>
-</addon>
-<addon id="plugin.program.firetv" name="[COLOR ghostwhite][B]FTG[/B][/COLOR][COLOR blue][B]Wizard[/B][/COLOR]" version="1.0.2" provider-name="F.T.G.">
-  <requires>
-    <import addon="xbmc.python" version="2.1.0"/>
+	<import addon="plugin.program.FTGmessages" version="1.0.1"/>
   </requires>
   <extension point="xbmc.python.pluginsource" library="default.py">
     <provides>executable</provides>
@@ -28,20 +15,26 @@
     <platform>all</platform>
   </extension>
 </addon>
-<addon id="repository.firetv" name="[COLOR ghostwhite][B]FireTv Repo[/B][/COLOR]" version="1.0.1" provider-name="FTG">
+<addon id="plugin.program.FTGmessages" version="1.0.1" name="FTG MESSAGES" provider-name="FTG">
   <requires>
-    <import addon="xbmc.addon" version="12.0.0" />
+  	<import addon="xbmc.python" version="2.1.0"/>
+  	<import addon="script.module.addon.common" optional="true" />
   </requires>
-  <extension point="xbmc.addon.repository" name="FireTvGuru Repository">
-    <info compressed="false">https://raw.githubusercontent.com/firetvguru1/repo/master/addons.xml</info>
-    <checksum>https://raw.githubusercontent.com/firetvguru1/repo/master/addons.xml.md5</checksum>
-    <datadir zip="true">https://raw.githubusercontent.com/firetvguru1/zips/master/addons/</datadir>
+  <extension point="xbmc.python.script" library="default.py">
+    <provides>executable</provides>
+  </extension>
+  <extension point="xbmc.service" library="service.py" start="startup">
   </extension>
   <extension point="xbmc.addon.metadata">
-    <summary>FireTvGuru Repository!</summary>
-    <description>FireTvGuru Repository!</description>
-    <disclaimer>All Add-Ons Within This Repo Are Supplied/Created And/Or Modified By 3rd Party Developers</disclaimer>
-    <platform>all</platform>
+  	<summary></summary>
+  	<description></description>
+  	<disclaimer></disclaimer>
+  	<language>en</language>
+  	<platform>all</platform>
+  	<forum></forum>
+  	<website></website>
+  	<source></source>
+  	<email></email>
   </extension>
 </addon>
 </addons>
